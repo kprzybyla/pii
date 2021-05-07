@@ -1,0 +1,20 @@
+[tool.black]
+line-length = 99
+target-version = ['py39']
+include = '\.pyi?$'
+exclude = '''
+(
+  /(
+      \.eggs
+    | \.git
+    | \.mypy_cache
+    | \.tox
+    | build
+    | dist
+  )/
+  | _version\.py
+)
+'''
+
+[tool.setuptools_scm]
+write_to = 'src/pii/__version__.py'
